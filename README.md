@@ -19,8 +19,10 @@ Structures & Unions: Custom composite data types using struct and typedef.
 
 File Handling: Reading and writing data streams via file pointers (fopen, fprintf, fscanf, fclose).
 
-🛠️ How to Compile and Run
+#🛠️ How to Compile and Run
+
 To run these programs locally, ensure you have the GCC compiler installed on your system.
+
 On Windows
 Open Command Prompt or PowerShell inside the target folder:
 # Compile
@@ -28,7 +30,8 @@ gcc filename.c -o program
 # Run
 program.exe
 
-On Linux / macOS
+#On Linux / macOS
+
 Open Terminal inside the target folder:
 # Compile
 gcc filename.c -o program
