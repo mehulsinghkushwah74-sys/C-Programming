@@ -1,0 +1,60 @@
+Actual Argument: The real value or variable passed to the function when calling it.
+int res = add(x, y); // 'x' and 'y' are actual arguments
+Formal Argument: The variable declared in the function definition header that receives and stores the incoming value.
+int add(int a, int b) { ... } // 'a' and 'b' are formal arguments
+Dummy Argument: Placeholder variable names used in a function prototype solely to indicate data types to the compiler. The compiler ignores these names.
+int add(int num1, int num2); // 'num1' and 'num2' are dummy arguments
+
+the differnce between the function declaration(prototype) and defination
+
+the function declaration is like int add(int a , int b);
+ends with semicolon  ;
+usually above the int main()
+no memory allocation
+informs the compiler about function name, return type and parameter type.
+
+and the function defination id like int add(int a, int b){
+    return a+b;
+}
+do not ends with semicolon it uses {}
+this gives the actual logic and implementation of the function
+usually below the int main()
+allocates memorary for funtion instruction and variable
+
+Why Prototypes are Needed: C compilers read code from top to bottom. If main() calls a function defined below it without a prior prototype, the compiler issues a warning or compilation error because it does not know the return type or parameter signature.
+
+
+GOTO 
+goto statement is for going to that 
+#include <stdio.h>
+
+int main() {
+    printf("Line 1: Start\n");
+
+    goto skip; // Jumps directly to 'skip'
+
+    printf("Line 2: This will be skipped!\n");
+    printf("Line 3: This will also be skipped!\n");
+
+skip: // Destination label (ends with a colon)
+    printf("Line 4: Landed at skip label\n");
+
+    return 0;
+}
+
+#include <stdio.h>
+
+int main() {
+    int i = 1;
+
+repeat: // Label
+    printf("%d ", i);
+    i++;
+
+    if (i <= 5) {
+        goto repeat; // Backward jump
+    }
+
+    return 0;
+}
+Why Discouraged ("Spaghetti Code"): Using multiple goto statements causes tangled, jumping control paths that resemble a bowl of spaghetti. It violates structured programming by bypassing single-entry/single-exit structures, making tracing and debugging extremely difficult.
