@@ -1,0 +1,2 @@
+Namaste! Yeh pehla line hai file me.
+C language file handling simple hai.
